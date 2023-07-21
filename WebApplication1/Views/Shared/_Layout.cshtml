@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+    <style>
+        /* CSS for the fixed left sidebar */
+        .sidebar {
+            float:left;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: 25%; /* Adjust the width as needed */
+            margin-top:15%;
+            background-color: #f0f0f0; /* Adjust the background color as needed */
+            padding: 20px;
+            color:black;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <center style="background-color:white">
+            <div style="width:60%; font-size:1.3vw">
+                <table class="table-responsive" style="display:inline; text-align:center">
+                    <tr>
+                        <td>
+                            <img src="~/Content/Images/logo.jpg" style="width:90%;">
+                        </td>
+
+                        <td style="padding-left:2%" colspan="2">
+                            <table style="display:inline; text-align:left" class="table-responsive">
+                                <tr>
+                                    <td>Mobile: 9027142219 | 9027142219</td>
+                                </tr>
+
+                                <tr>
+                                    <td>WealthyServices.com | <a href="mailto:ramniwas3993@gmail.com">E-mail: ramniwas3993@gmail.com</a></td>
+                                </tr>
+
+                                <tr>
+                                    <td>Office Address: abc noida</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Uttar Pradesh, India</td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td colspan="2"></td>
+
+                        <td>
+                            <img src="~/Content/Images/founder.png" style="width:110%; border-radius:10%" />
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+        </center>
+
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("About", "About", "Home")</li>
+                    <li>@Html.ActionLink("Services & Specialities", "", "")</li>
+                    <li>@Html.ActionLink("Compliance Cloud", "", "")</li>
+                    <li>@Html.ActionLink("Contact Us", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Site Map", "", "")</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="sidebar">
+        <!-- Left Sidebar Content -->
+        <p>This is a random paragraph in the fixed left sidebar.</p>
+        <img src="~/Content/Images/logo.jpg" style="width:90%;">
+        <br><br>
+        <img src="~/Content/Images/founder.png" style="width:90%;">
+        <!-- Add more content to the left sidebar if needed -->
+    </div>
+
+    <div class="container body-content" style="margin-top:15%; margin-left:25%; width:75%">
+
+        @RenderBody()
+        <hr />
+        <footer>
+            <center>
+                <h1 style="color:red">OFFICE ADDRESS</h1>
+                <h6>Plot no. </h6>
+                <h6>Mobile No:  9027142219</h6>
+                <h6>E-mail:<a href="mailto:ramniwas3993@gmail.com">ramniwas3993@gmail.com</a></h6>
+            </center>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
